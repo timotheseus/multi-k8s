@@ -1,6 +1,6 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "containerDefinitions": [
+  "containerDefinintions": [
     {
       "name": "client",
       "image": "tvanderzwaag/multi-client",
