@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: vzorder-tls
+spec:
+  secretName: vzorder-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: vzorder.com
+  dnsNames:
+    - vzorder.com
+    - www.vzorder.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - vzorder.com
+          - www.vzorder.com
